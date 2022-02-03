@@ -91,7 +91,7 @@ void falco_engine::list_fields(std::string &source, bool verbose, bool names_onl
 	// applicable to multiple event sources.
 	for(auto &it : m_filter_factories)
 	{
-		if(source != "" && source != it.first)
+		if(source != "all" && source != it.first)
 		{
 			continue;
 		}
@@ -110,7 +110,7 @@ void falco_engine::list_fields(std::string &source, bool verbose, bool names_onl
 	// field classes and also printing info on supported sources.
 	for(auto &it : m_filter_factories)
 	{
-		if(source != "" && source != it.first)
+		if(source != "all" && source != it.first)
 		{
 			continue;
 		}
